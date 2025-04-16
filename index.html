@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cricket History Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+ <!-- Only the relevant changed part is shown -->
+<nav class="navbar">
+  <div class="logo">Cricket Hub</div>
+  <ul class="nav-links">
+    <li><a href="#legends">Legends</a></li>
+    <li><a href="#matches">Iconic Matches</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="about.html">About</a></li> <!-- Modified link -->
+    <li><a href="#facts">Did You Know</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Cricket History Hub</h1>
+      <p>Explore the timeless moments, legends, and unforgettable matches</p>
+    </div>
+  </header>
+
+  <!-- Legends of Cricket -->
+  <section class="section" id="legends">
+    <h2>Legends of Cricket</h2>
+    <div class="cards">
+      <a class="card" href="sachin.html">
+        <h3>Sachin Tendulkar</h3>
+        <p>The Master Blaster who ruled cricket for over two decades.</p>
+      </a>
+      <a class="card" href="shoaib.html">
+        <h3>Shoaib Akhtar</h3>
+        <p>The Rawalpindi Express – fastest bowler in cricket history.</p>
+      </a>
+      <a class="card" href="abdevilier.html">
+        <h3>Glenn Maxwell</h3>
+        <p>The Big Show – an explosive all-rounder redefining modern cricket.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Iconic Matches -->
+  <section class="section" id="matches">
+    <h2>Iconic Matches</h2>
+    <div class="cards">
+      <a class="card" href="maxwell201.html">
+        <h3>Maxwell’s 201*</h3>
+        <p>An ODI miracle under pressure against Afghanistan in 2023.</p>
+      </a>
+      <a class="card" href="brathwaite.html">
+        <h3>Brathwaite’s 4 Sixes</h3>
+        <p>The T20 World Cup finale that left fans stunned in 2016.</p>
+      </a>
+      <a class="card" href="stokesashes.html">
+        <h3>Stokes’ Ashes Knock</h3>
+        <p>Stokes' 135* carried England to a miraculous win at Headingley.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="cards">
+      <a class="card" href="yuvraj.html">
+        <h3>Yuvraj’s Six Sixes</h3>
+        <p>A storm of power in one unforgettable over in 2007.</p>
+      </a>
+      <a class="card" href="afridi.html">
+        <h3>Afridi’s Monster Six</h3>
+        <p>The longest six in history – a 158-meter marvel.</p>
+      </a>
+      <a class="card" href="bblfinal.html">
+        <h3>BBL Final No-Ball Drama</h3>
+        <p>Fireworks started after a no-ball, followed by a free hit bowled – unbelievable chaos!</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Did You Know? -->
+  <section class="section did-you-know" id="facts">
+    <h2>Did You Know?</h2>
+    <div id="cricketFact" class="fact-box">
+      Sachin Tendulkar played international cricket for 24 years!
+    </div>
+  </section>
+
+  
+
+  <!-- Dark Mode Button -->
+  <button id="darkModeToggle">Toggle Dark Mode</button>
+
+  <!-- JavaScript for Fact Rotation -->
+  <script>
+    const facts = [
+      "Sachin Tendulkar played international cricket for 24 years!",
+      "Jim Laker took 19 wickets in a single Test match.",
+      "Chris Gayle has the fastest T20 century in just 30 balls.",
+      "India’s 1983 World Cup win changed the sport in the country.",
+      "Muttiah Muralitharan has over 1300 international wickets!"
+    ];
+
+    let factIndex = 0;
+    const factBox = document.getElementById("cricketFact");
+
+    setInterval(() => {
+      factIndex = (factIndex + 1) % facts.length;
+      factBox.textContent = facts[factIndex];
+    }, 7000);
+
+    // Dark Mode Toggle
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+
+</body>
+</html>
